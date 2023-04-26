@@ -48,7 +48,7 @@ namespace _01{
             decimetros = milimetros / 100;
 
             Console.WriteLine("La canntidad en milimetros es "+ milimetros + " sus equivalencias son :");
-            Console.WriteLine("Metros: " + metros + ", en Centimentros: " + centimetros + " , en decimetros : " + decimetros  );
+            Console.WriteLine("Metros: " + metros + "m, en Centimentros: " + centimetros + "cm , en decimetros : " + decimetros + "dm" );
 
 
             //PROBLEMA 4
