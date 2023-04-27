@@ -16,6 +16,7 @@ class pronblema6 {
             Console.WriteLine("No es mayor de edad");
         };
 
+
         //Problema 12
 
         int numner,num1,num2;
