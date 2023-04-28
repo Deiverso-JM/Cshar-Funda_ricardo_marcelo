@@ -261,5 +261,18 @@ class pronblema6 {
             Console.WriteLine("triangulo escaleno");    
             }
         }
+    
+
+
+
+
+
+
+
+
+
     }
+
+
+
 }
