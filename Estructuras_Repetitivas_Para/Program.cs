@@ -123,3 +123,189 @@ Console.WriteLine($"La cantidad de numeros menores es: {cantidad}");
 Console.WriteLine($"La suma de numeros menores a es: {suma}");
 
 //------------------------------------
+
+//Ejercicio 45
+
+Console.WriteLine("Escribe un numero:");
+int n = int.Parse(Console.ReadLine());
+
+int n1=0, n2, n3;
+
+int cantidad = 0;
+int contador = 0;
+int acumulador = 1;
+
+
+for (int i = 1; i <= n; i++)
+{
+    acumulador = 0;
+    n1 = i; 
+    while (n1 > 0)
+    {
+        n2 = n1 % 10;
+        acumulador = (acumulador * 10) + n2; 
+        n1 = (n1 - n2) / 10;
+    }
+    if(acumulador == i )
+    {
+        cantidad++;
+    }
+
+
+}
+Console.WriteLine("la cantidad de numeros Capicua es:");
+Console.WriteLine(cantidad);
+
+
+//------------------------
+
+
+//Ejercicio 46
+Console.WriteLine("Escribe el divisor");
+
+int n = int.Parse(Console.ReadLine());
+int n1 = 0, n2 = 0;
+int multiplos = 0;
+
+
+int cifras = 0;
+for (int i = 0;i<= 0; i++)
+{
+    n1 = n;
+	while (n1> 0)
+	{
+        n2 = n1 % 10;
+        n1 = (n1 - n2) / 10;
+		cifras++;
+    }
+
+    for (int j = 1; j <= n; j++)
+    {
+        multiplos += j % cifras  == 0 ? 1 : 0;
+        
+    }
+
+}
+
+
+
+Console.WriteLine($"La cantidad de multiples es: {multiplos}");
+
+
+//----------------------
+
+//Ejercicio 47
+
+using MathNet.Numerics;
+
+Console.WriteLine("Ingresa X:");
+int x = int.Parse(Console.ReadLine()); 
+Console.WriteLine("Ingresa N:");
+int n = int.Parse(Console.ReadLine());
+
+double serie = 0;
+
+for (int i = 0; i <= n ; i++)
+{
+    serie += (Math.Pow(x, i) / SpecialFunctions.Factorial(i));
+}
+
+//----------------------
+
+//Ejercicio 48
+
+Console.WriteLine("Escriba la cantidad de objetos");
+int n = int.Parse(Console.ReadLine());
+
+int cantidad = 1;
+
+for (int i = 2; i <= n; i++)
+{   
+    cantidad *= i;
+    
+}
+
+Console.WriteLine($"La cantidad de veces que se puede organizar un objeto es: {cantidad}");
+
+
+//----------------------
+
+// Ejercicio 49 
+
+using System.Runtime.CompilerServices;
+
+Console.WriteLine("Escribe la cantidad de numeros:");
+int n = int.Parse(Console.ReadLine());
+
+int contador=0, n1, cantidad = 0;
+
+
+
+for (int i = 0; i <= n; i++)
+{
+    contador = 0;
+    n1 = i;
+    for (int j = 1; j <= n1; j++)
+    {
+        if (n1 % j == 0)
+        {
+            contador++;
+        }
+    }
+
+    if(contador == 2)
+    {
+        cantidad++;
+    }
+
+    
+
+}
+
+
+Console.WriteLine($"Cantidad de numeros primos es: {cantidad}");
+
+
+
+//----------------------
+
+// Ejercicio 50
+
+Console.WriteLine("Escribe el rango de numero:");
+int n = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Escribe el numero de cifras de numero:");
+int numeroCifras = int.Parse(Console.ReadLine());
+
+
+
+int n1 = 0, n2, n3, cifras=0;
+
+int cantidad = 0;
+int contador = 0;
+int acumulador = 1;
+
+
+for (int i = 1; i <= n; i++)
+{
+    cifras= 0;
+    acumulador = 0;
+    n1 = i;
+
+    while (n1 > 0)
+    {
+        cifras++;
+        n2 = n1 % 10;
+        acumulador = (acumulador * 10) + n2;
+        n1 = (n1 - n2) / 10;
+    }
+    if (acumulador == i && cifras == numeroCifras)
+    {
+        cantidad++;
+    }
+
+
+}
+Console.WriteLine("la cantidad de numeros Capicua es:");
+Console.WriteLine(cantidad);
+
