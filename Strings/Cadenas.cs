@@ -75,3 +75,66 @@ else
 }
 
 //--------------------------
+
+
+//Ejercicio 66
+
+
+Console.WriteLine("Escribe la palabra:");
+string nombre = Console.ReadLine();
+string newNombre = String.Empty;
+
+for (int i = nombre.Length - 1; i > -1; i--)
+{
+    newNombre += nombre[i];
+}
+
+if (newNombre.ToLower() == nombre.ToLower())
+{
+    Console.WriteLine($"Si es Palindroma la palabra: {nombre}");
+}
+else { 
+    Console.WriteLine($"No es Palindroma la palabra: {nombre}");
+}
+
+
+//--------------------------
+
+//Ejercicio 67
+
+//Leer
+Console.WriteLine("Escribe la Frase:");
+string? nombre = Console.ReadLine();
+
+//Separar
+var nombres = new string[nombre.Length];
+nombres = nombre.Split(' ');
+
+//Variable cambiante
+string newNombre = String.Empty;
+int contador = 0;
+
+
+foreach (var nomb in nombres)
+{
+
+    newNombre = "";
+    for (int i = nomb.Length - 1; i > -1; i--)
+    {
+        newNombre += nomb[i];
+    }
+
+
+    if (newNombre.ToLower() == nomb.ToLower())
+    {
+        contador++;
+    }
+
+}
+
+Console.WriteLine($"La cantidad de palabras palindromas que tiene la frase es: {contador}");
+
+
+//--------------------------
+
+//Ejercicio 68
