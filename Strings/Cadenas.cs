@@ -138,3 +138,79 @@ Console.WriteLine($"La cantidad de palabras palindromas que tiene la frase es: {
 //--------------------------
 
 //Ejercicio 68
+
+//Leer
+Console.WriteLine("Escribe la Frase:");
+string? nombre = Console.ReadLine();
+
+//Separar
+var nombres = new string[nombre.Length];
+nombres = nombre.Split(' ');
+
+//Variable cambiante
+string newNombre = String.Empty;
+int contador = 0;
+
+
+var palabrasAqui = new string[nombres.Length];
+
+
+foreach (var nomb in nombres)
+{
+    for (int i = 0; i < nombres.Length; i++)
+    {
+        if (nomb.ToLower().Equals(nombres[i].ToLower()))  
+        {
+            contador++;
+            palabrasAqui[i] = nomb; 
+        }
+    }
+}
+
+Console.WriteLine($"La cantidad de palabras que se repite son: {(contador - nombres.Length) / 2}");
+
+//--------------------------
+
+
+//Ejercicio 69
+
+
+//Leer
+Console.WriteLine("Escribe la Frase:");
+string? nombre = Console.ReadLine();
+
+string newFrase = string.Empty;
+int newNumbrer = 0;
+
+foreach (var nomb in nombre)
+{
+    newNumbrer = (int) nomb + 2;
+    newFrase += (char) newNumbrer;
+}
+
+
+Console.WriteLine($"La nueva frase encriptada es:  {newFrase}");
+
+
+//--------------------------
+
+
+//Ejercicio 70
+
+//Leer
+Console.WriteLine("Escribe la Frase encriptada:");
+string? nombre = Console.ReadLine();
+
+string newFrase = string.Empty;
+int newNumbrer = 0;
+
+foreach (var nomb in nombre)
+{
+    newNumbrer = (int) nomb - 2;
+    newFrase += (char) newNumbrer;
+}
+
+
+Console.WriteLine($"La frase desencriptada es: {newFrase}");
+
+
