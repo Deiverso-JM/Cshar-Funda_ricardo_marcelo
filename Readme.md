@@ -11,6 +11,7 @@ este mismo.
 Repositorio dividido en subcarpetas, cada uno con ejercicios de una tematica del libro, los ejercicio estan divididos por el siguiente formato:
 -- _Cada carpeta representa un capitulo del libro con el cual correcpondes sus ejercicios_
 
+
 ----
 
 
